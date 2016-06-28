@@ -46,7 +46,7 @@ node default {
 }
 file { '/etc/motd':
      ensure => 'file',
-     owner => 'chandukon',
+     owner => 'marypoppins',
      group => 'wheel',
      content => 'Learned to apply manifest and manage file resource',
     }
