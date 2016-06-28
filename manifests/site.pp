@@ -44,6 +44,9 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
-file { '/tmp/test':
-     ensure => present,
+file { '/etc/motd':
+     ensure => 'file',
+     owner => 'chandukon',
+     group => 'wheel',
+     content => 'Learned to apply manifest and manage file resource',
     }
