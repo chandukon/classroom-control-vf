@@ -44,3 +44,6 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
+file { '/tmp/test':
+     ensure => present,
+    }
