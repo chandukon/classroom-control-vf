@@ -44,9 +44,13 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
-file { '/etc/motd':
-     ensure => 'file',
-     owner => 'marypoppins',
-     group => 'wheel',
-     content => 'Learned to apply manifest and manage file resource',
-    }
+#file { '/etc/motd':
+#     ensure => 'file',
+ #    owner => 'marypoppins',
+  #   group => 'wheel',
+   #  content => 'Learned to apply manifest and manage file resource',
+    #}
+  exec { 'Welcome to ${::fqdn}!' > /etc/motd' :
+  onlyif => absent
+  
+  }
