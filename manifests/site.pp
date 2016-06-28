@@ -50,7 +50,7 @@ node default {
   #   group => 'wheel',
    #  content => 'Learned to apply manifest and manage file resource',
     #}
-  exec { 'Welcome to ${::fqdn}!' > /etc/motd' :
+  exec { "echo 'Testing exec resource' > /etc/motd" :
   onlyif => absent
   
   }
