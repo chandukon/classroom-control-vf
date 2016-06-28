@@ -51,6 +51,6 @@ node default {
    #  content => 'Learned to apply manifest and manage file resource',
     #}
   exec { "echo 'Testing exec resource' > /etc/motd" :
-  onlyif => absent
+  onlyif => '/bin/grep "testing" /etc/motd',
   
   }
